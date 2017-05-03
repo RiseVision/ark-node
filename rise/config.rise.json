@@ -1,0 +1,89 @@
+{
+  "port": 8001,
+  "address": "0.0.0.0",
+  "version": "0.3.0",
+  "fileLogLevel": "info",
+  "logFileName": "logs/rise_testnet.log",
+  "consoleLogLevel": "debug",
+  "trustProxy": false,
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "rise_testnet",
+    "user": null,
+    "password": "<db password here>",
+    "poolSize": 20,
+    "poolIdleTimeout": 30000,
+    "reapIntervalMillis": 1000,
+    "logEvents": [
+      "error"
+    ]
+  },
+  "api": {
+    "mount": true,
+    "access": {
+      "whiteList": []
+    },
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      }
+    }
+  },
+  "peers": {
+    "minimumNetworkReach": 1,
+      "list": [
+          {
+	      "ip": "52.168.147.40",
+	      "port": 8001
+	  },
+	{
+	    "ip" : "40.68.35.45",
+	    "port": 8001
+	},
+		{
+	    "ip" : "23.99.49.199",
+	    "port": 8003
+	}
+    ],
+    "blackList": [],
+    "options": {
+      "limits": {
+        "max": 0,
+        "delayMs": 0,
+        "delayAfter": 0,
+        "windowMs": 60000
+      },
+      "maxUpdatePeers": 20,
+      "timeout": 5000
+    }
+  },
+  "forging": {
+    "coldstart": 6,
+      "force": true,
+    "secret": [
+    ],
+    "access": {
+      "whiteList": [
+        "127.0.0.1"
+      ]
+    }
+  },
+  "loading": {
+    "verifyOnLoading": false,
+    "loadPerIteration": 5000
+  },
+  "ssl": {
+    "enabled": false,
+    "options": {
+      "port": 443,
+      "address": "0.0.0.0",
+      "key": "./ssl/ark.key",
+      "cert": "./ssl/ark.crt"
+    }
+  },
+  "nethash": "545e522142d10a18b4e92211f3f2a2d362f2b1bc8fb23ba3ff18da8670863634"
+}
