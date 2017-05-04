@@ -100,10 +100,14 @@ npm install
 ## Launch
 To launch Ark on Rise testnet
 
-Edit `rise/config.rise.json` and enter the password you set for the database in `db.password`.
+```
+sudo -u postgres psql -c "CREATE USER $USER WITH PASSWORD 'password';"
+sudo -u postgres createdb -O $USER rise_testnet
+```
+
+Edit `rise/config.rise.json` and enter 'password' on `db` --> `password`.
 
 ```
-createdb ark_testnet
 forever start app.js -c rise/config.rise.json -g rise/genesisBlock.rise.json 
 ```
 
