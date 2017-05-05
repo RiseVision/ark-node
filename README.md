@@ -87,8 +87,8 @@ sudo npm install forever -g
 Clone this repository
 ```
 git clone https://github.com/RiseVision/ark-node.git
-checkout rise_testnet
 cd ark-node
+git checkout rise_testnet
 ```
 
 Install node modules:
