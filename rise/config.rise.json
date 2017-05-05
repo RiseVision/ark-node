@@ -1,7 +1,7 @@
 {
   "port": 8001,
   "address": "0.0.0.0",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "fileLogLevel": "info",
   "logFileName": "logs/rise_testnet.log",
   "consoleLogLevel": "debug",
@@ -46,7 +46,7 @@
 	},
 		{
 	    "ip" : "23.99.49.199",
-	    "port": 8003
+	    "port": 8001
 	}
     ],
     "blackList": [],
