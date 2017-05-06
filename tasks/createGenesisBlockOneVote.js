@@ -13,22 +13,22 @@ var genesisAccounts = JSON.parse(fs.readFileSync('./tasks/genesis.testnet.accoun
 var remainingfund = {};
 var totalpremine = 12500000000000000;
 
-
+arkjs.crypto.setNetworkVersion(66);
 
 var config = {
-    "port": 4000,
+    "port": 9001,
     "address": "0.0.0.0",
     "version": "1.0.0",
     "fileLogLevel": "info",
-    "logFileName": "logs/ark.log",
+    "logFileName": "logs/rise_testnet.log",
     "consoleLogLevel": "debug",
     "trustProxy": false,
     "db": {
         "host": "localhost",
         "port": 5432,
-        "database": "ark_testnet",
+        "database": "rise_testnet",
         "user": null,
-        "password": "password",
+        "password": "<password>",
         "poolSize": 20,
         "poolIdleTimeout": 30000,
         "reapIntervalMillis": 1000,
@@ -52,7 +52,7 @@ var config = {
     },
     "peers": {
         "minimumNetworkReach":1,
-        "list": [{"ip":"127.0.0.1", "port":4000}],
+        "list": [{"ip":"127.0.0.1", "port":9001}],
         "blackList": [],
         "options": {
             "limits": {
@@ -88,7 +88,7 @@ var config = {
             "cert": "./ssl/ark.crt"
         }
     },
-    "network":"testnet",
+    "network":"risetestnet",
     "nethash":"198f2b61a8eb95fbeed58b8216780b68f697f26b849acf00c8c93bb9b24f783d"
 };
 

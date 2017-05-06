@@ -53,5 +53,19 @@
       "symbol":"DѦ",
       "explorer":"http://dexplorer.ark.io"
     }
-  }
+  },
+    "risetestnet": {
+	"messagePrefix": "RISETESTNET message:\n",
+	"bip32": {
+	    "public": 11,
+	    "private": 12
+	},
+	"pubKeyHash": 66,
+	"wif": 188,
+	"client": {
+	    "token": "TESTRISE",
+	    "symbol": "TR",
+	    "explorer":"http://texplorer.rise.io"
+	}
+    }
 }
