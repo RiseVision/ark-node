@@ -1,3 +1,8 @@
+# Rise on Ark
+
+Work in progress for running Rise on the Ark codebase.
+To install a Rise testnet node follow the Developer Installation. The instructions have been modified for Rise.
+
 # Ark
 
 Ark is a next generation crypto-currency and decentralized application platform, written entirely in JavaScript. For more information please refer to our website: https://ark.io/.
@@ -59,9 +64,7 @@ sudo apt-get install -y curl build-essential python git
 Install PostgreSQL (min version: 9.5.2)
 
 ```
-sudo apt-get install -y postgresql postgresql-contrib
-sudo -u postgres createuser --createdb --password $USER
-createdb ark_test
+sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 ```
 
 Install Node.js (tested with version 6.9.2, but any recent LTS release should do):
@@ -80,8 +83,9 @@ sudo npm install grunt-cli -g
 
 Clone this repository
 ```
-git clone https://github.com/arkecosytem/ark-node.git
+git clone https://github.com/RiseVision/ark-node.git
 cd ark-node
+git checkout rise_devnet
 ```
 
 Install node modules:
@@ -91,6 +95,20 @@ npm install
 ```
 
 ## Launch
+
+To launch Ark on Rise testnet
+
+```
+sudo -u postgres psql -c "CREATE USER $USER WITH PASSWORD 'password';"
+sudo -u postgres createdb -O $USER rise_testnet
+```
+
+Edit `config.risetestnet.json` and enter 'password' on `db` --> `password`.
+
+```
+forever start app.js -c config.risetestnet.json -g genesisBlock.risetestnet.json
+```
+
 To launch Ark on testnet:
 ```
 createdb ark_testnet
