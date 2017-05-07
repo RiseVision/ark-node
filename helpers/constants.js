@@ -37,7 +37,7 @@ module.exports = {
 			200000000, // Milestone 3
 			200000000  // Milestone 4
 		],
-		offset: 23600,   // Start rewards at block, a bit over 24 hours after
+		offset: 50,   // Start rewards at block, a bit over 24 hours after
 		distance: 3000000, // Distance between each milestone
 	},
 	signatureLength: 196,
