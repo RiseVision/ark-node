@@ -65,7 +65,7 @@
 	"client": {
 	    "token": "TESTRISE",
 	    "symbol": "TR",
-	    "explorer":"http://texplorer.rise.io"
+	    "explorer":"http://explorer.risetestnet.seatrips.eu:6040"
 	}
     }
 }
